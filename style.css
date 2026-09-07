@@ -381,3 +381,96 @@ footer {
         transition: none !important;
     }
 }
+/* =========================
+   TO-DO LIST
+   ========================= */
+
+#todo-form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#todo-form input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.todo-controls {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.todo-controls button {
+    background: var(--secondary);
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    list-style: none;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#task-list li span {
+    flex: 1;
+    text-align: left;
+}
+
+#task-list li.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.edit-button {
+    background: var(--secondary);
+}
+
+.delete-button {
+    background: #dc2626;
+}
+
+#clear-completed {
+    margin-top: 1rem;
+    background: #475569;
+}
+
+
+/* Mobile To-Do layout */
+
+@media (max-width: 480px) {
+
+    #todo-form {
+        flex-direction: column;
+    }
+
+    #todo-form button {
+        width: 100%;
+    }
+
+    #task-list li {
+        flex-wrap: wrap;
+    }
+
+    #task-list li span {
+        min-width: 120px;
+    }
+
+    .edit-button,
+    .delete-button {
+        flex: 1;
+    }
+}
