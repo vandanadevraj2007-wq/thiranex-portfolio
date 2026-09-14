@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Dashboard | My Portfolio</title>
+    <meta name="description" content="A real-time weather dashboard using JavaScript and a REST API.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>My Portfolio</h1>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="todo.html">To-Do List</a></li>
+                <li><a href="weather.html">Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="weather-section">
+
+            <h2>🌤️ Weather Dashboard</h2>
+
+            <p>
+                Search for a city to view its current weather information.
+            </p>
+
+            <form id="weather-form">
+                <label for="city-input">Enter city name:</label>
+
+                <div class="weather-search">
+                    <input
+                        type="text"
+                        id="city-input"
+                        placeholder="e.g. Bengaluru"
+                        required
+                    >
+
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+
+            <p id="weather-message" aria-live="polite"></p>
+
+            <article id="weather-card" class="weather-card" hidden>
+
+                <h3 id="city-name"></h3>
+
+                <div class="weather-details">
+
+                    <div class="weather-item">
+                        <span>🌡️</span>
+                        <h4>Temperature</h4>
+                        <p id="temperature">--</p>
+                    </div>
+
+                    <div class="weather-item">
+                        <span>💧</span>
+                        <h4>Humidity</h4>
+                        <p id="humidity">--</p>
+                    </div>
+
+                    <div class="weather-item">
+                        <span>💨</span>
+                        <h4>Wind Speed</h4>
+                        <p id="wind-speed">--</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="weather.js"></script>
+
+</body>
+</html>
